@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Display Page</title>
+</head>
+<body>
+
+<h1>Data from Database</h1>
+
+<div id="data-container"></div>
+
+<script>
+    fetch('disp.php')
+    .then(response => response.text())
+    .then(responseText => {
+      console.log('Raw Response:', responseText);
+      try {
+        const data = JSON.parse(responseText);
+        console.log('Parsed Data:', data);
+  
+        if (data.error) {
+          console.error('Error fetching data:', data.error);
+          return;
+        }
+  
+        // Handle the data and update the HTML
+        const dataContainer = document.getElementById('data-container');
+        dataContainer.innerHTML = '<ul>';
+        data.forEach(item => {
+          dataContainer.innerHTML += `<li>Name: ${item.name}</li>`;
+          dataContainer.innerHTML += `<li>Email: ${item.email}</li>`;
+          dataContainer.innerHTML += `<li>Password: ${item.password}</li>`;
+          // Assuming the image is stored in the 'image' column as base64 encoded data
+          dataContainer.innerHTML += `<li>Image: <img src="data:image/jpeg;base64,${item.image}" alt="User Image"></li>`;
+        });
+        dataContainer.innerHTML += '</ul>';
+      } catch (error) {
+        console.error('Error parsing JSON:', error);
+      }
+    })
+    .catch(error => console.error('Error fetching data:', error));
+</script>
+
+</body>
+</html>

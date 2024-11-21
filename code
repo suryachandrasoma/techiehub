@@ -1,0 +1,48 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "KARTHIK@2004";
+$database = "om";
+$conn = mysqli_connect($servername, $username, $password, $database);
+$rollno="";
+$class="";
+$name = "";
+$email = "";
+$phone = "";
+$year = "";
+$errorMessage = "";
+$successmsg = "";
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $rollno=$_POST['rollno'];
+    $class=$_POST['class'];
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $year = $_POST['year'];
+
+    do {
+        if (empty($rollno) || empty($class)||empty($name) || empty($email) || empty($phone) || empty($year)) {
+            $errorMessage = "All fields are required";
+            break;
+        }
+
+        $sql = "INSERT INTO `clients` (`rollno`,`class`,`name`, `email`, `phone`, `year`) VALUES ('$rollno', '$class','$name', '$email', '$phone', '$year')";
+        $result = $conn->query($sql);
+
+        if (!$result) {
+            $errorMessage = "Invalid query: " . $conn->error;
+            break;
+        }
+        $rollno="";
+        $class="";
+        $name = "";
+        $email = "";
+        $phone = "";
+        $year = "";
+        $successmsg = "Record added";
+        header("location: /admin.php");
+        exit;
+    } while (false);
+}
+?>

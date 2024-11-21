@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <style>
+        .collapse {
+            margin-left: 10px;
+            font-weight: bolder;
+            font-size: 22px;
+        }
+        
+        .navbar {
+            width: 100%;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .navbar-brand {
+            margin-left: 10px;
+        }
+
+        .q {
+           background-image: url(techo.jpg);
+           background-repeat: no-repeat;
+           background-size: cover;
+            justify-content: space-evenly;
+            display: flex;
+            flex-direction: column; /* Display as column by default */
+            align-items: center;
+            height: 500px;
+        }
+
+        .w {
+            color: white;
+            font-weight: bold;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .e {
+            margin-top: 20px;
+            position: relative;
+        }
+
+        @keyframes slideRight {
+            from {
+                transform: translateX(-190%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        .w {
+            animation: slideRight 2s ease-in-out;
+        }
+
+        /* Media Queries */
+       /*
+        .t{
+              display: flex;
+              justify-content: space-evenly;
+              gap: 20px;
+        }
+         .y{
+          width: 300px;
+          height: 300px;
+          background-color: aliceblue;
+          overflow:auto;
+          box-shadow: 0 4px 8px rgba(105, 246, 4, 0.1);
+          
+          
+         
+         
+        }
+        .u{
+          width: 300px;
+          height: 300px;
+          background-color:chartreuse;
+          overflow:scroll;
+        }
+        .i{
+          width: 300px;
+          height: 300px;
+          background-color:chocolate;
+          overflow:scroll;
+        }*/
+        .t {
+          display: flex;
+          justify-content: space-evenly;
+          gap: 20px;
+          background-color: aliceblue;
+        }
+        .o{
+          background-color: black;
+          color:white;
+           display: flex;
+           justify-content: space-between;
+           padding-top: 20px;
+        }
+        .y,
+        .u,
+        .i {
+          width: 500px;
+          height: 300px;
+          padding: 20px; /* Add padding for better spacing */
+          background-color: #ffffff;
+          overflow: auto;
+          border-radius: 15px;
+          box-shadow: 0 9px 8px rgba(0, 0, 0, 0.1);
+      
+        }
+        .y h2,
+        .u h2,
+        .i h4 {
+          margin-bottom: 15px;
+        }
+        
+        .y p,
+        .u,
+        .i {
+          font-size: 16px;
+          line-height: 1.5;
+          color: #333;
+        }
+        
+        .y img {
+          width: 100%;
+          border-radius: 15px;
+        }
+        .p,
+        .a,
+        .s {
+          width: 500px;
+          height: 200px;
+          padding: 20px; /* Add padding for better spacing */
+          background-color:black;
+          overflow: auto;
+          border-radius: 15px;
+          box-shadow: 0 9px 8px rgba(0, 0, 0, 0.1);
+      
+        }
+        .p h4,
+        .a h4,
+        .s h4 {
+          margin-bottom: 15px;
+        }
+        
+        .p p,
+        .a,
+        .s {
+          font-size: 16px;
+          line-height: 1.5;
+          color: white;
+        }
+        
+        .p img {
+          width: 100%;
+         
+        }
+        
+        @media only screen and (max-width: 800px) {
+          .t {
+            flex-direction: column;
+            margin-left: 0; /* Adjust margin for smaller screens */
+          }
+          .y,
+          .u,
+          .i {
+            width: 100%;
+            padding: 20px; /* Full width for smaller screens */
+          }
+          
+          .o{
+            flex-direction: column;
+            margin-left: 0px;
+            
+          }
+        .p,.a,.s{
+          width:100%;
+          padding:20px;
+        }
+        .ml{
+          margin-left: 500px;
+        }
+        }
+        
+        /* Additional styling for better visibility on smaller screens */
+        @media only screen and (max-width: 768px) {
+          .y,
+          .u,
+          .i {
+            margin-bottom: 20px;
+          }
+          .p,.a,.s{
+            margin-bottom: 20px;
+            
+          }
+          
+        }
+        
+       
+        .a li{
+          list-style-type: none;
+        }
+        .fa {
+          padding: 20px;
+          font-size: 30px;
+          width: 30px;
+          text-align: center;
+          text-decoration: none;
+          border-radius: 50%;
+        }
+        .ml{
+          
+          padding-left: 500px;
+          overflow: hidden;
+        }
+        
+    </style>
+    
+       
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background:linear-gradient(violet,white)">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="i.webp" width="100px" height="100px" style="border-radius: 50%;"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown link
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <div class="q">
+        <div class="w">
+           <h1 style="font-size: 60px;" class="c">TechieHub</h1>
+          <br> <p style="font-size:20px" align="center">Know and grow</p>
+        </div>
+        <div class="e">
+            <img src="ws1.jpeg" style="border-radius: 20px;">
+        </div>
+    </div>
+    <br>
+    <h1 align="center" style="color:black; font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">Vision and mission</h1>
+    <br>
+    <div class="t">
+      <div class="y">
+        <h2>Foundation and Ideology:</h2>
+        <p>Techie Hub was founded with a singular goal - to provide a platform for individuals to  explore and expand their horizons in the vast realm of technology.
+           The club endeavors to break down the silos that often characterize the tech world, promoting an inclusive environment where diverse perspectives converge to create something extraordinary.</p>
+      </div>
+
+      
+      <div class="u">
+        <h2 >Diverse Membership:</h2>
+        
+        This diversity not only reflects the expansive nature of technology but also ensures a holistic approach to problem-solving and innovation. Members come from different backgrounds, bringing unique skills, experiences, and ideas to the table, creating a rich tapestry of knowledge exchange.
+       
+      </div>
+      <div class="i">
+        <h2>Techie Talks:
+        </h2> 
+            Beyond practical workshops, Techie Hub organizes Techie Talks and panel discussions, inviting industry leaders, researchers, and innovators to share their insights. These sessions provide a platform for members to interact with established professionals, ask questions, and gain valuable insights into the current trends and future directions of technology. 
+            
+            
+            
+      </div>
+    </div>
+<br>
+<h2>Our College:</h2>
+<img src="collegephoto.jpg" class="img-fluid" alt="...">
+<br><br>
+<p>Malla Reddy College of Engineering (Formerly CM Engineering College) has been established under the aegis of the Malla Reddy Group of institutions in the year 2005, a majestic empire, founded by chairman Sri. Ch. Malla Reddy. He has been in the field of education for the last 22 years with the intention of spearheading quality education among children from the school level itself.</p>
+<p>Since the beginning Mr. Malla Reddy has endeavoured to ensure quality education and carved a niche for himself by managing this group of institutions.
+
+  Malla Reddy College of Engineering has been laid upon a very strong foundation and has ever since been excelling in every aspect. The bricks of this able institute are certainly the adept management, the experienced faculty, the selfless non-teaching staff and of course the students.</p>
+ 
+  <h2 align="center">MEMBERS</h2><br>
+  <div class="table-responsive">
+    <table class="table table-hover">
+      <caption>List of users</caption>
+      <thead >
+        <tr>
+          <th scope="col">Sno</th>
+          <th scope="col">Role</th>
+          <th scope="col">Name</th>
+          <th scope="col">Handle</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>President</td>
+          <td>Karthik</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Executive Officer</td>
+          <td>Pavani</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Secretary</td>
+          <td>Sathwik</td>
+          <td>@twitter</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="ml">
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeATGp8hCTjypVv5d3GDIPLjZt3seeO9dh57T84q8r70I0rQA/viewform?embedded=true" width="640" height="997" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+</div>
+<div class="o">
+ <div class="p">
+  <h4 style="margin-left: 20px; margin-top:10px">Techiehub</h4>
+  <p style="color:pink;">Techie Hub extends beyond the realm of technology. By nurturing a community that values collaboration, innovation, and continuous learning.</p>
+ </div>
+ <div class="a">
+  <h4 style="padding-left:20px">Browse</h4>
+  <ul>
+    <li>Home</li>
+    <li>About</li>
+    <li>Contact</li>
+    <li>Connect</li>
+  </ul>
+ </div>
+ <div class="s">
+  <h4 style="padding-left:30px;">Contact us</h4>
+<a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-linkedin"></a>
+<a href="#" class="fa fa-instagram"></a>
+ </div>
+ <hr>
+ Copyrights&copy; all rights reserved TechieHub
+</div>
+</body>
+</html>

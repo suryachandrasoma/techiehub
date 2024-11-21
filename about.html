@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <title>About Us</title>
+    <link rel="stylesheet" href="home.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/f2a4b9346f.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <style>
+     @import url("https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@400;600;700&display=swap");
+      
+      @media(max-width: 700px){
+        .intro h3{
+          font-size: 20px;
+        }
+        .text h3{
+          font-size: 25vw;
+        }
+        .card h2{
+          font-size: 20px
+        }
+        .card p{
+          font-size: 2vw;
+          line-height: 1;
+        }
+       
+        .card--display i{
+          font-size: 20px;
+        }
+       
+        }
+       
+.x,
+.y,
+.z{
+  width: 500px;
+  height: 300px;
+  padding: 20px;
+  background-color: wheat;
+  overflow: auto;
+  border-radius: 10px;
+  box-shadow: 0 9px 8px rgba(0,0,0,0.1);
+}
+.all{
+  padding-left: 15vw;
+}
+.text {
+  fill: none;
+  stroke-width: 6;
+  stroke-linejoin: round;
+  stroke-dasharray: 70 330;
+  stroke-dashoffset: 0;
+  -webkit-animation: stroke 6s infinite linear;
+  animation: stroke 6s infinite linear;
+}
+
+.text:nth-child(5n + 1) {
+  stroke: #F2385A;
+  -webkit-animation-delay: -1.2s;
+  animation-delay: -1.2s;
+}
+.text:nth-child(5n + 2) {
+  stroke: #F5A503;
+  -webkit-animation-delay: -2.4s;
+  animation-delay: -2.4s;
+}
+
+.text:nth-child(5n + 3) {
+  stroke: #c0f57f;
+  -webkit-animation-delay: -3.6s;
+  animation-delay: -3.6s;
+}
+
+.text:nth-child(5n + 4) {
+  stroke: #56D9CD;
+  -webkit-animation-delay: -4.8s;
+  animation-delay: -4.8s;
+}
+
+.text:nth-child(5n + 5) {
+  stroke: #08637f;
+  -webkit-animation-delay: -6s;
+  animation-delay: -6s;
+}
+
+@-webkit-keyframes stroke {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+
+/* Other styles */
+html, body {
+  height: 100%;
+}
+
+.mine {
+ 
+  background-size: .2em 100%;
+  font: 14.5em/1 Open Sans, Impact;
+  text-transform: uppercase;
+  margin: 0;
+  margin-top: -2vw;
+}
+
+svg {
+  position: relative;
+  width: 70%;
+  height: 30%;
+  margin-top: 0;
+  padding-top: 0;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.cseimg img{
+height: 50%;
+width: 50%;
+position: relative;
+float: left;
+margin-right: 15px;
+}
+.csetext p{
+  font-size: 2vw;
+}
+.csetext h2{
+  font-size: 4vw;
+}
+.cse{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+  margin-left: 2vw;
+}
+@media(max-width: 480px){
+        .mine{
+          margin-top: -22vw;
+        }
+        .cse{
+          margin-top: -16vw;
+        }
+      }
+      * {
+  margin: 0;
+  padding: 0;
+}
+.team{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 10vh;
+  background: white;
+}
+
+
+.team p {
+  font-weight: 700;
+  text-align: center;
+  font-size: 40px;
+  font-family: Hack, sans-serif;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, hotpink, blue, hotpink);
+  letter-spacing: 5px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: shine 5s linear infinite;
+  position: relative;
+}
+
+@keyframes shine {
+  0% {
+    background-position-x: -500%;
+  }
+  100% {
+    background-position-x: 500%;
+  }
+}
+
+    </style>
+</head>
+<body>
+  <!-------------header image-------------->
+  <div class="header">
+    <img src="about1.png" height="150px" width="1400px" alt="nature" class="responsive">
+  </div>
+    
+    <!------------------Navbar----------->
+    <section id="nav-bar">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="fa-solid fa-bars" style="color: #f7f9fc;"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <div class="auto">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link " aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="gallery.html">Gallery</a>
+                </li>
+                
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Events
+                  </a>
+                  <ul class="dropdown-menu">
+                   <li><a class="dropdown-item" href="competitions.html">Competitions</a></li>
+                   <li><a class="dropdown-item" href="upcomingevents.html">Upcoming Events</a></li>
+                   <li><a class="dropdown-item" href="#">Past Events</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contactUs.html">Contact Us</a>
+                </li>
+                <button class="button">Admin</button>
+              </ul>
+            </div>
+          </div>
+        </div>
+        </nav>
+        
+      </section>
+    <!---------------About us intro------------->
+       <!---- <div class="colimg">
+        <div class="promo" style="--overlay-color: hotpink">
+          <div class="image-wrapper"><img src="college.jpg"></div>
+          <h2 class="title" data-cta="Get out there →">Nightlife</h2>
+        </div>--->
+      <img src="college.jpg" class="img-fluid" alt="Responsive image">
+      
+        <div class="coltext"><h1 class="responsive-font-example">
+    <span style="--i:1">O</span>
+   <span style="--i:2">u</span>
+   <span style="--i:3">r</span>
+   <span style="--i:4"> </span>
+   <span style="--i:5"> </span>
+   <span style="--i:6">C</span>
+   <span style="--i:7">a</span>
+   <span style="--i:8">m</span>
+   <span style="--i:9">p</span>
+   <span style="--i:10">u</span>
+   <span style="--i:11">s</span></h1>
+        </div>
+        <br>
+        <div class="desp">
+          <p>Malla Reddy College of Engineering (Formerly CM Engineering College) has been established under the aegis of the Malla Reddy Group of institutions in the year 2005, a majestic empire, founded by chairman Sri. Ch. Malla Reddy. He has been in the field of education for the last 22 years with the intention of spearheading quality education among children from the school level itself.</p>
+          <p>Since the beginning Mr. Malla Reddy has endeavoured to ensure quality education and carved a niche for himself by managing this group of institutions. Malla Reddy College of Engineering has been laid upon a very strong foundation and has ever since been excelling in every aspect. The bricks of this able institute are certainly the adept management, the experienced faculty, the selfless non-teaching staff and of course the students</p>
+        </div><br>
+    <!----------------Administrators----------------->
+        <section class="faculty">
+          <div class="admintext">
+            <h2 class="animate">Our Administrators</h2>
+          </div>
+        <div class="container">
+          <div class="out">
+            <div class="img1">
+              <img src="chairman.webp" alt="">
+            </div>
+            <div class="info">
+              <h2>Founder Chairman</h2>
+              <p>Ch.Mallareddy is not merely a leader; he is a beacon of inspiration, a catalyst for positive transformation for students. His journey is marked by a series of milestones that have shaped the trajectory of our institution in the successful direction.</p>
+            </div>
+          </div>
+          <div class="out">
+            <div class="img1">
+              <img src="principal.webp" alt="">
+            </div>
+            <div class="info">
+              <h2>Principal</h2>
+              <p>Under Principal Ashok's leadership, we have witnessed the realization of ambitious educational initiatives that have elevated our college to new heights. His strategic vision and dedication to academic excellence have propelled us forward through an innovative experiences.</p>
+            </div>
+          </div>
+          <div class="out">
+            <div class="img1">
+              <img src="hod.webp" alt="">
+            </div>
+            <div class="info">
+              <h2>Head Of Department</h2>
+              <p>By Dr.Radha Sagar's leadership and commitment, the Department of Computer Science and Engineering has seen extraordinary advancements. Her commitment to academic excellence, has propelled our department by maintaining the standards and discipline.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+    <!------------------cse----------->
+    
+    <div class="mine">
+      <svg viewBox="0 0 1320 300">
+
+      <!-- Symbol -->
+      <symbol id="s-text">
+        <text text-anchor="middle" x="50%" y="50%" dy=".35em">
+          About CSE
+        </text>
+      </symbol>
+    
+      <!-- Duplicate symbols -->
+      <use xlink:href="#s-text" class="text"></use>
+      <use xlink:href="#s-text" class="text"></use>
+      <use xlink:href="#s-text" class="text"></use>
+      <use xlink:href="#s-text" class="text"></use>
+      <use xlink:href="#s-text" class="text"></use>
+    
+    </svg></div>
+    <div class="cse">
+    <div class="cseimg">
+      <img src="cse.jpg" class="img-fluid" alt="Responsive image">
+      <div class="csetext">
+        <h2>Computer Science</h2>
+        <p>Within our institution, the Computer Science and Engineering (CSE) department stands as a beacon of innovation and collaboration. Guided by passionate faculty and equipped with cutting-edge resources, it fosters an environment where students explore the frontiers of technology. Here, we're not just learners; we're creators, empowered to push boundaries and redefine what's possible. The camaraderie among peers and the relentless pursuit of excellence make this department an unparalleled hub of intellectual growth and opportunity, shaping not only our academic journeys but also our aspirations for a future defined by innovation and impact.</p>
+      </div>
+    </div>
+  </div><br>
+  <div class="team">
+    <p>Our team of Techie Hub</p>
+  </div>
+  
+<!---------------Footer-------------------->
+<footer>
+  <div class="all">
+<div class="row">
+  <div class="col">
+    <a href="https://mrce.in/"><img src="footer_logo.png" class="logo"></a>
+    <p>For any college related queries please refer our Official website. Stay tuned to this website regularly for information regarding compettions being held.</p>
+  </div>
+  <div class="col">
+    <h3>Techie-hub@MRCE</h3>
+    <p>Mysammaguda</p>
+    <p>Medchal, PIN 500034, India</p>
+    <a href="contactUs.html"><p class="email-id">tpavani04@email.com</p></a>
+        <h4>+91 - 0123456789</h4>
+      </div>
+    <div class="col">
+    <h3>Links <div class="underline"><span></span></div></h3>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="competitions.html">Events</a></li>
+      <li><a href="contactUs.html">Contact Us</a></li>
+    </ul>
+  </div>
+  <div class="col">
+    <h3>Blog<div class="underline"><span></span></div></h3>
+    <!--<form>
+      <i class="fa-regular fa-envelope"></i>
+      <input type="email" placeholder="Enter your email id">
+      <button type="submit"><i class="fa-solid fa-arrow-right" style="color: white; font-size: 16px;"></i></button>
+    </form>-->
+    <a href="https://techiehublog.wordpress.com/2024/01/19/exploring-the-thriving-world-of-computer-science-events-and-cutting-edge-technologies-in-college/"><button class="button">Visit the blog</button><br><br><br><br></a>
+    <div class="social-icons">
+      <a href=""><i class="fa-brands fa-facebook"></i></a>
+      <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+      <a href=""><i class="fa-brands fa-instagram"></i></a>
+      <a href=""><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+  </div>
+</div>
+<hr>
+<p class="copyright">&copy; Techie hub <i class="fa-regular fa-copyright"></i> 2023 - All Rights Reserved </p>
+</div>
+</footer>
+  </body>
+  </html>

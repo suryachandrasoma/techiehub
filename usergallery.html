@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Gallery</title>
+    <style>
+        /* Add your CSS styles for the gallery here */
+        .image-container {
+            display: inline-block;
+            margin: 10px;
+        }
+        .image-container img {
+            max-width: 200px;
+            max-height: 200px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>User Gallery</h1>
+
+    <div id="gallery">
+        <!-- Gallery content will be dynamically updated here -->
+    </div>
+
+    <script>
+        // Function to update the gallery
+        function updateGallery() {
+            // You need to implement this part to fetch updated data via AJAX and refresh the gallery
+            // For now, let's just log a message to the console
+            console.log("Gallery updated");
+        }
+
+        // Function to continuously check for updates
+        function checkForUpdates() {
+            setInterval(function() {
+                var xhr = new XMLHttpRequest();
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+                        if (xhr.responseText === "success") {
+                            updateGallery(); // Update gallery if update received
+                        }
+                    }
+                };
+                xhr.open("GET", "check_updates.php", true);
+                xhr.send();
+            }, 5000); // Check for updates every 5 seconds (adjust as needed)
+        }
+
+        // Start checking for updates when the page loads
+        window.onload = function() {
+            checkForUpdates();
+        };
+
+        // Example data for testing (replace with actual data)
+        var imageData = [
+            { url: "path/to/image1.jpg", description: "Description 1" },
+            { url: "path/to/image2.jpg", description: "Description 2" },
+            // Add more image data as needed
+        ];
+
+        // Function to display images in the gallery
+        function displayImages(images) {
+            var galleryDiv = document.getElementById("gallery");
+            galleryDiv.innerHTML = ""; // Clear previous content
+
+            images.forEach(function(image) {
+                var imageContainer = document.createElement("div");
+                imageContainer.classList.add("image-container");
+
+                var img = document.createElement("img");
+                img.src = image.url;
+                img.alt = image.description;
+
+                var description = document.createElement("p");
+                description.textContent = image.description;
+
+                imageContainer.appendChild(img);
+                imageContainer.appendChild(description);
+                galleryDiv.appendChild(imageContainer);
+            });
+        }
+
+        // Call displayImages with imageData to initially populate the gallery (replace this with actual data)
+        displayImages(imageData);
+    </script>
+</body>
+</html>
